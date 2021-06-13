@@ -11,7 +11,7 @@ const Hourly = (props) => {
   return (
     <>
       <div className="hourConditions">
-        <div className="conditionsH" style={{ height: props.hourly.temp * 1.5 }}>
+        <div className="conditionsH" style={{ height: window.innerWidth < 500 ? props.hourly.temp * 1 : props.hourly.temp * 1.5 }}>
           <p>{Math.round(props.hourly.temp)}°</p>
         </div>
       </div>

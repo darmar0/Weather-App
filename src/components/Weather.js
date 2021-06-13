@@ -113,7 +113,7 @@ const Weather = (props) => {
           ) : null}
         </div>
 
-        <div className="forecast">
+        <div className="forecast" style={{ marginTop: !isNaN(values.temp) ? "-1rem" : "1.7rem" }}>
           {props.daily.slice(0, 4).map((d, i) => {
             let index = i + 1;
             let forecastDay = days[day + index > 7 ? day + index - 7 : day + index].substring(0, 3);

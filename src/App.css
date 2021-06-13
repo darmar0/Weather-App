@@ -212,3 +212,44 @@ body {
     margin: 1rem 0 0.5rem 0;
   }
 }
+@media screen and (max-width: 360px) {
+  .location p {
+    font-size: 0.9rem;
+    line-height: 0.5rem;
+  }
+  .location h2 {
+    font-size: 1.8rem;
+  }
+
+  .icon {
+    font-size: 11rem;
+  }
+  .forIcon {
+    font-size: 4.1rem;
+    color: white;
+  }
+  .iconLoad {
+    font-size: 11rem;
+  }
+  .weatherDetails h2 {
+    font-size: 2rem;
+  }
+  .weatherDetails p {
+    font-size: 0.8rem;
+  }
+  .forecastTemp p {
+    line-height: 0;
+    font-size: 80%;
+    color: white;
+  }
+  .weatherDetails {
+    flex: 0 0 20rem;
+    text-align: center;
+  }
+  .hourly {
+    margin-bottom: 0;
+  }
+  .forecast {
+    margin-top: -1rem;
+  }
+}
