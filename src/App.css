@@ -153,11 +153,21 @@ body {
 .minForTemp {
   color: gray;
 }
-
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1024px) {
   body {
     background-size: auto;
   }
+
+  .currentWeather {
+    margin: 28vh 15vw 0 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .currentWeather {
+    margin: 28vh 6vw 0 0;
+  }
+}
+@media screen and (max-width: 428px) {
   .currentWeather {
     display: flex;
     justify-content: center;
@@ -165,8 +175,59 @@ body {
     margin: 0;
     gap: 0;
   }
+  .loc_cont {
+    margin-top: 3vh;
+  }
+  .location {
+    margin-right: 35vw;
+    margin-bottom: 10vh;
+  }
+  .forIcon {
+    font-size: 5.2rem;
+  }
+  .icon {
+    font-size: 15rem;
+  }
+  .iconLoad {
+    font-size: 15rem;
+    margin-top: 25vh;
+  }
+  .hourly {
+    margin: 2.5rem 0 5rem 0;
+  }
+  .forecast {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+}
+@media screen and (max-width: 414px) {
+  .loc_cont {
+    margin-top: 2vh;
+  }
+  .location {
+    margin-bottom: 2vh;
+  }
+  .hourly {
+    margin: 2.5rem 0 4rem 0;
+  }
+  .forecast {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  .iconLoad {
+    margin-top: 15vh;
+  }
+}
+@media screen and (max-width: 375px) {
+  body {
+    background-size: auto;
+  }
+
   .location {
     margin-right: 50%;
+    margin-bottom: 3vh;
   }
   .loc_cont {
     margin-top: 0;
@@ -180,7 +241,7 @@ body {
     line-height: 0rem;
   }
   .weatherInfo {
-    width: 20rem;
+    width: 100%;
   }
   .weatherIcon {
     flex: 0 0 10rem;
@@ -195,8 +256,18 @@ body {
   .iconLoad {
     font-size: 14rem;
   }
+  .weatherDetails {
+    margin: -1rem 0 1rem 0;
+  }
   .weatherDetails h2 {
     font-size: 2.5rem;
+  }
+  .hourly {
+    grid-gap: 0.8rem;
+    margin: 1rem 0 2rem 0;
+  }
+  .hours {
+    margin-top: -1.3rem;
   }
 
   .forecastTemp p {
@@ -208,11 +279,12 @@ body {
     flex: 0 0 20rem;
     text-align: center;
   }
-  .hourly {
-    margin: 1rem 0 0.5rem 0;
-  }
 }
 @media screen and (max-width: 360px) {
+  .location {
+    margin-right: 55vw;
+    margin-bottom: 0vh;
+  }
   .location p {
     font-size: 0.9rem;
     line-height: 0.5rem;
@@ -231,6 +303,9 @@ body {
   .iconLoad {
     font-size: 11rem;
   }
+  .weatherDetails {
+    margin: -2rem 0 1rem 0;
+  }
   .weatherDetails h2 {
     font-size: 2rem;
   }
@@ -247,9 +322,34 @@ body {
     text-align: center;
   }
   .hourly {
-    margin-bottom: 0;
+    margin: 1rem 0 1rem 0;
   }
   .forecast {
-    margin-top: -1rem;
+    gap: 1rem;
+  }
+  .forecast {
+    margin-top: 0rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  .location {
+    margin-bottom: -3vh;
+  }
+
+  .icon {
+    font-size: 10rem;
+  }
+  .forIcon {
+    font-size: 3.6rem;
+  }
+  .iconLoad {
+    font-size: 11rem;
+  }
+  .weatherDetails {
+    margin: -2.5rem 0 1rem 0;
+  }
+
+  .hourly {
+    margin: 0.5rem 0 0.5rem 0;
   }
 }

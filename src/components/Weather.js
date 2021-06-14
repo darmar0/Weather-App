@@ -105,7 +105,7 @@ const Weather = (props) => {
             <div className="hourly">
               {props.hourly
                 .filter((i, index) => index % 2 === 0)
-                .slice(0, window.innerWidth < 500 ? 8 : 10)
+                .slice(0, window.innerWidth < 370 ? 8 : window.innerWidth < 500 ? 10 : 12)
                 .map((d) => {
                   return <Hourly hourly={d} key={d.clouds} />;
                 })}
