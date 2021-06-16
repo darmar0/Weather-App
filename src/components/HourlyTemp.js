@@ -5,9 +5,7 @@ const Hourly = (props) => {
   let date = new Date(unix * 1000);
   let hours = date.getHours();
   let formattedTime = hours;
-  /*let time = formattedTime.filter((i) => i % 3 == 0);*/
 
-  console.log(props.hourly);
   return (
     <>
       <div className="hourConditions">
