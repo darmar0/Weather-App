@@ -13,6 +13,7 @@ import img6 from "../images/overcastSky.jpg";
 const Weather = (props) => {
   const [weather, setWeather] = useState();
   const [selected, setSelect] = useState("temp");
+  const [forecast, setForecast] = useState(false);
 
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
   let months = [
@@ -103,7 +104,8 @@ const Weather = (props) => {
             <p>Humidity: {values.humidity}%</p>
             <p>Wind: {values.wind_speed} km/h</p>
           </div>
-          {window.innerWidth > 500 ? (
+
+          {window.innerWidth > 500 && forecast === false ? (
             <div className="selection">
               <p
                 onClick={() => setSelect("temp")}
@@ -116,21 +118,21 @@ const Weather = (props) => {
               </p>
             </div>
           ) : null}
-          {selected === "temp" || window.innerWidth < 500 ? (
+          {(selected === "temp" && forecast === false) || (window.innerWidth < 500 && forecast === false) ? (
             <div className="hourly">
               {props.hourly
                 .filter((i, index) => index % 2 === 0)
-                .slice(0, window.innerWidth < 370 ? 8 : window.innerWidth < 500 ? 11 : 12)
+                .slice(0, window.innerWidth < 370 ? 10 : window.innerWidth < 500 ? 11 : 12)
                 .map((d) => {
                   return <HourlyTemp hourly={d} key={d.clouds} temp={"temp"} />;
                 })}
             </div>
           ) : null}
-          {selected === "prec" || window.innerWidth < 500 ? (
+          {(selected === "prec" && forecast === false) || (window.innerWidth < 500 && forecast === false) ? (
             <div className="hourly">
               {props.hourly
                 .filter((i, index) => index % 2 === 0)
-                .slice(0, window.innerWidth < 370 ? 8 : window.innerWidth < 500 ? 9 : 10)
+                .slice(0, window.innerWidth < 370 ? 8 : 10)
                 .map((d) => {
                   return <HourlyPrec hourly={d} key={d.clouds} />;
                 })}
@@ -138,7 +140,7 @@ const Weather = (props) => {
           ) : null}
         </div>
 
-        <div className="forecast">
+        <div className="forecast" onClick={() => setForecast(true)}>
           {props.daily.slice(0, 4).map((d, i) => {
             let index = i + 1;
             let forecastDay = days[day + index > 7 ? day + index - 7 : day + index].substring(0, 3);

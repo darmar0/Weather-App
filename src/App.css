@@ -42,6 +42,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   width: 25rem;
+  margin-bottom: -1rem;
 }
 .weatherIcon {
   flex: 0 0 1rem;
@@ -58,7 +59,7 @@ body {
   display: flex;
   justify-content: flex-start;
   gap: 1rem;
-  margin: -2rem 0 1rem 0;
+  margin: -1rem 0 1rem 0;
   width: 100%;
   border-bottom: 1px solid transparent;
 }
@@ -86,18 +87,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  height: 3.4rem;
 }
 .hourConditionsPrec {
   grid-row: 1;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin: 0 -0.5em;
+  margin: 0.2rem -0.5em;
+  height: 3.4rem;
 }
 .conditionsHprec {
   border-top: 2px solid #1a73e8;
   background-color: white;
-  margin-top: 2rem;
+  margin-top: 0rem;
   padding: 0.5rem;
   width: 1.35rem;
 }
@@ -112,14 +115,14 @@ body {
   color: white;
 }
 .conditionsHprec p {
-  margin-top: -2.2rem;
+  margin-top: -2rem;
   font-size: 0.8rem;
   color: white;
 }
 .hoursPrec {
   grid-row: 2;
   display: flex;
-  margin-top: -1.2rem;
+  margin-top: -1.6rem;
   justify-content: center;
 }
 .hoursPrec p {
@@ -254,7 +257,6 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 0.5rem;
-
     width: 100%;
   }
 }
@@ -280,9 +282,6 @@ body {
   }
   .hourly {
     margin: 2rem 0 0 0;
-  }
-  .forecast {
-    margin: 0;
   }
 }
 @media screen and (max-width: 390px) {
@@ -311,7 +310,7 @@ body {
     margin: 2.5rem 0 0 0;
   }
   .forecast {
-    margin-top: 1rem;
+    margin-top: 3rem;
   }
 }
 @media screen and (max-width: 375px) {
@@ -323,7 +322,7 @@ body {
     font-size: 2.3rem;
   }
   .weatherInfo {
-    margin: 0 0 3rem 0;
+    margin: 0 0 2rem 0;
   }
 
   .icon {
@@ -357,13 +356,16 @@ body {
     font-size: 3.7rem;
     color: white;
   }
+  .forecast {
+    margin-top: 0rem;
+  }
 }
 @media screen and (max-width: 360px) {
   .currentWeather {
     gap: 0rem;
   }
   .location p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 0.5rem;
   }
   .location h2 {
@@ -376,7 +378,7 @@ body {
     font-size: 1.9rem;
   }
   .weatherInfo {
-    margin: -0.7rem 0 0rem 0;
+    margin: 0rem 0 0rem 0;
   }
   .hourly {
     margin: 1.5rem 0 0rem 0;
@@ -386,9 +388,14 @@ body {
   .location {
     margin-bottom: -3vh;
   }
-
+  .weatherInfo {
+    margin: 2rem 0 0rem 0;
+  }
+  .weatherInfo h2 {
+    font-size: 1.5rem;
+  }
   .icon {
-    font-size: 10rem;
+    font-size: 8rem;
   }
   .forIcon {
     font-size: 3.6rem;

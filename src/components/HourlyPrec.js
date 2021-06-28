@@ -12,7 +12,7 @@ const HourlyPrec = (props) => {
         <div
           className="conditionsHprec"
           style={{
-            height: window.innerWidth < 360 ? Math.round(props.hourly.pop) * 1 : props.hourly.pop * 1.5,
+            height: Math.round(props.hourly.pop) / 3,
           }}
         >
           <p>{Math.round(props.hourly.pop)}%</p>
